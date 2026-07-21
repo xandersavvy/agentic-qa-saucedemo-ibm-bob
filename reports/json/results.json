@@ -1,0 +1,439 @@
+{
+  "config": {
+    "argv": [
+      "C:\\nvm4w\\nodejs\\node.exe",
+      "C:\\Users\\SouvikGhosh\\bob\\test\\saucedemo\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/e2e/purchase-flow.spec.ts",
+      "--project=chromium"
+    ],
+    "configFile": "C:\\Users\\SouvikGhosh\\bob\\test\\saucedemo\\playwright.config.ts",
+    "rootDir": "C:/Users/SouvikGhosh/bob/test/saucedemo/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/SouvikGhosh/bob/test/saucedemo/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/SouvikGhosh/bob/test/saucedemo/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/SouvikGhosh/bob/test/saucedemo/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/SouvikGhosh/bob/test/saucedemo/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/SouvikGhosh/bob/test/saucedemo/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "C:/Users/SouvikGhosh/bob/test/saucedemo/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/SouvikGhosh/bob/test/saucedemo/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "mobile-chrome",
+        "name": "mobile-chrome",
+        "testDir": "C:/Users/SouvikGhosh/bob/test/saucedemo/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "reports/html",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/json/results.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "reports/junit/results.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "purchase-flow.spec.ts",
+      "file": "purchase-flow.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "SauceDemo — Full E2E Purchase Flow",
+          "file": "purchase-flow.spec.ts",
+          "line": 21,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Complete purchase flow: add to cart, remove item, checkout, confirm, logout",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7288,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "\u001b[32m2026-07-21T20:12:55.569Z [STEP ] ▶ Logging in | {\"username\":\"standard_user\"}\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[36m2026-07-21T20:12:57.431Z [INFO ] Login succeeded, proceeding to inventory page\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[32m2026-07-21T20:12:57.456Z [STEP ] ▶ Verifying inventory page loaded\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[36m2026-07-21T20:12:57.580Z [INFO ] Inventory page loaded successfully\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[32m2026-07-21T20:12:57.584Z [STEP ] ▶ Capturing full-page screenshot of products listing\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[36m2026-07-21T20:12:58.036Z [INFO ] Screenshot captured\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[32m2026-07-21T20:12:58.039Z [STEP ] ▶ Adding products to cart | {\"products\":[\"Sauce Labs Backpack\",\"Sauce Labs Bolt T-Shirt\",\"Sauce Labs Bike Light\",\"Sauce Labs Onesie\"]}\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[32m2026-07-21T20:12:58.460Z [STEP ] ▶ Verifying add-to-cart actions\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[36m2026-07-21T20:12:58.516Z [INFO ]   ✓ Sauce Labs Backpack added to cart\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[36m2026-07-21T20:12:58.574Z [INFO ]   ✓ Sauce Labs Bolt T-Shirt added to cart\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[36m2026-07-21T20:12:58.626Z [INFO ]   ✓ Sauce Labs Bike Light added to cart\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[36m2026-07-21T20:12:58.682Z [INFO ]   ✓ Sauce Labs Onesie added to cart\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[36m2026-07-21T20:12:58.730Z [INFO ] Cart badge shows 4\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[32m2026-07-21T20:12:58.732Z [STEP ] ▶ Navigating to cart\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[32m2026-07-21T20:12:58.940Z [STEP ] ▶ Verifying cart contents (4 products)\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[36m2026-07-21T20:12:59.009Z [INFO ]   ✓ Sauce Labs Backpack present in cart\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[36m2026-07-21T20:12:59.009Z [INFO ]   ✓ Sauce Labs Bolt T-Shirt present in cart\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[36m2026-07-21T20:12:59.009Z [INFO ]   ✓ Sauce Labs Bike Light present in cart\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[36m2026-07-21T20:12:59.009Z [INFO ]   ✓ Sauce Labs Onesie present in cart\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[32m2026-07-21T20:12:59.219Z [STEP ] ▶ Removing Sauce Labs Backpack from cart\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[36m2026-07-21T20:12:59.295Z [INFO ] Backpack removed\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[32m2026-07-21T20:12:59.296Z [STEP ] ▶ Verifying cart after removal\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[36m2026-07-21T20:12:59.325Z [INFO ]   ✓ Backpack NOT present\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[36m2026-07-21T20:12:59.367Z [INFO ]   ✓ Sauce Labs Bolt T-Shirt still present\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[36m2026-07-21T20:12:59.407Z [INFO ]   ✓ Sauce Labs Bike Light still present\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[36m2026-07-21T20:12:59.447Z [INFO ]   ✓ Sauce Labs Onesie still present\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[32m2026-07-21T20:12:59.645Z [STEP ] ▶ Clicking Checkout button\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[36m2026-07-21T20:12:59.816Z [INFO ] Checkout information page loaded\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[32m2026-07-21T20:12:59.817Z [STEP ] ▶ Filling checkout info | {\"firstName\":\"John\",\"lastName\":\"Doe\",\"zipCode\":\"12345\"}\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[36m2026-07-21T20:13:00.113Z [INFO ] Checkout info submitted\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[32m2026-07-21T20:13:00.115Z [STEP ] ▶ Verifying checkout overview\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[36m2026-07-21T20:13:00.180Z [INFO ] Checkout overview page loaded\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[32m2026-07-21T20:13:00.181Z [STEP ] ▶ Verifying order line items\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[36m2026-07-21T20:13:00.224Z [INFO ]   ✓ Correct products listed\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[36m2026-07-21T20:13:00.280Z [INFO ]   ✓ Correct prices listed\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[32m2026-07-21T20:13:00.281Z [STEP ] ▶ Verifying order totals\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[36m2026-07-21T20:13:00.341Z [INFO ] Order summary retrieved | {\"itemTotal\":\"Item total: $33.97\",\"tax\":\"Tax: $2.72\",\"total\":\"Total: $36.69\"}\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[36m2026-07-21T20:13:00.399Z [INFO ]   ✓ Item total correct\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[36m2026-07-21T20:13:00.399Z [INFO ]   ✓ Tax correct\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[36m2026-07-21T20:13:00.399Z [INFO ]   ✓ Grand total correct\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[32m2026-07-21T20:13:00.558Z [STEP ] ▶ Clicking Finish button\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[36m2026-07-21T20:13:00.672Z [INFO ] Order submitted\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[32m2026-07-21T20:13:00.674Z [STEP ] ▶ Verifying confirmation page\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[36m2026-07-21T20:13:00.824Z [INFO ]   ✓ Order confirmed\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[32m2026-07-21T20:13:00.971Z [STEP ] ▶ Logging out\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[36m2026-07-21T20:13:02.137Z [INFO ] Logout triggered\u001b[0m\n"
+                        },
+                        {
+                          "text": "\u001b[36m2026-07-21T20:13:02.182Z [INFO ]   ✓ Login page visible — logout successful\u001b[0m\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Verify: inventory page is loaded after login",
+                          "duration": 126
+                        },
+                        {
+                          "title": "Capture full-page screenshot of all products",
+                          "duration": 453
+                        },
+                        {
+                          "title": "Add 4 products to the cart",
+                          "duration": 420
+                        },
+                        {
+                          "title": "Verify each product was successfully added to cart",
+                          "duration": 271
+                        },
+                        {
+                          "title": "Navigate to cart page",
+                          "duration": 208
+                        },
+                        {
+                          "title": "Verify all 4 products are present in cart",
+                          "duration": 279
+                        },
+                        {
+                          "title": "Remove Sauce Labs Backpack from cart",
+                          "duration": 76
+                        },
+                        {
+                          "title": "Verify backpack removed and remaining products still present",
+                          "duration": 347
+                        },
+                        {
+                          "title": "Proceed to checkout",
+                          "duration": 172
+                        },
+                        {
+                          "title": "Fill checkout information form",
+                          "duration": 296
+                        },
+                        {
+                          "title": "Verify checkout overview page loaded",
+                          "duration": 65
+                        },
+                        {
+                          "title": "Verify order items and prices on overview page",
+                          "duration": 99
+                        },
+                        {
+                          "title": "Verify subtotal, tax and total",
+                          "duration": 276
+                        },
+                        {
+                          "title": "Finish the purchase",
+                          "duration": 114
+                        },
+                        {
+                          "title": "Verify order confirmation page",
+                          "duration": 296
+                        },
+                        {
+                          "title": "Logout",
+                          "duration": 1167
+                        },
+                        {
+                          "title": "Verify successful logout",
+                          "duration": 148
+                        }
+                      ],
+                      "startTime": "2026-07-21T20:12:54.914Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "inventory-all-products",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\SouvikGhosh\\bob\\test\\saucedemo\\test-results\\purchase-flow-SauceDemo-—--0eb8d-tem-checkout-confirm-logout-chromium\\attachments\\inventory-all-products-30c90e3bc0b04d15e5ec849d75f26b00e12df774.png"
+                        },
+                        {
+                          "name": "cart-all-4-products",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\SouvikGhosh\\bob\\test\\saucedemo\\test-results\\purchase-flow-SauceDemo-—--0eb8d-tem-checkout-confirm-logout-chromium\\attachments\\cart-all-4-products-d0aa781336d7eed0db28375f54ea23fea6e69402.png"
+                        },
+                        {
+                          "name": "cart-after-backpack-removal",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\SouvikGhosh\\bob\\test\\saucedemo\\test-results\\purchase-flow-SauceDemo-—--0eb8d-tem-checkout-confirm-logout-chromium\\attachments\\cart-after-backpack-removal-7cfb8292a5a6d5a85f25e99f5915a9a202e6ce91.png"
+                        },
+                        {
+                          "name": "checkout-overview",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\SouvikGhosh\\bob\\test\\saucedemo\\test-results\\purchase-flow-SauceDemo-—--0eb8d-tem-checkout-confirm-logout-chromium\\attachments\\checkout-overview-d14de27f395bd6d4ce05e30b944e0757408bea96.png"
+                        },
+                        {
+                          "name": "order-confirmation",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\SouvikGhosh\\bob\\test\\saucedemo\\test-results\\purchase-flow-SauceDemo-—--0eb8d-tem-checkout-confirm-logout-chromium\\attachments\\order-confirmation-b20b2dbabb4f6220fc17060fb2cbf6e288a9a759.png"
+                        },
+                        {
+                          "name": "post-logout-login-page",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\SouvikGhosh\\bob\\test\\saucedemo\\test-results\\purchase-flow-SauceDemo-—--0eb8d-tem-checkout-confirm-logout-chromium\\attachments\\post-logout-login-page-349fadec5825643d34dbd920bdfefe218619d3ed.png"
+                        },
+                        {
+                          "name": "execution-log.txt",
+                          "contentType": "text/plain",
+                          "body": "MjAyNi0wNy0yMVQyMDoxMjo1NS41NjlaIFtTVEVQXSDilrYgTG9nZ2luZyBpbiB8IHsidXNlcm5hbWUiOiJzdGFuZGFyZF91c2VyIn0KMjAyNi0wNy0yMVQyMDoxMjo1Ny40MzFaIFtJTkZPXSBMb2dpbiBzdWNjZWVkZWQsIHByb2NlZWRpbmcgdG8gaW52ZW50b3J5IHBhZ2UKMjAyNi0wNy0yMVQyMDoxMjo1Ny40NTZaIFtTVEVQXSDilrYgVmVyaWZ5aW5nIGludmVudG9yeSBwYWdlIGxvYWRlZAoyMDI2LTA3LTIxVDIwOjEyOjU3LjU4MFogW0lORk9dIEludmVudG9yeSBwYWdlIGxvYWRlZCBzdWNjZXNzZnVsbHkKMjAyNi0wNy0yMVQyMDoxMjo1Ny41ODRaIFtTVEVQXSDilrYgQ2FwdHVyaW5nIGZ1bGwtcGFnZSBzY3JlZW5zaG90IG9mIHByb2R1Y3RzIGxpc3RpbmcKMjAyNi0wNy0yMVQyMDoxMjo1OC4wMzZaIFtJTkZPXSBTY3JlZW5zaG90IGNhcHR1cmVkCjIwMjYtMDctMjFUMjA6MTI6NTguMDM5WiBbU1RFUF0g4pa2IEFkZGluZyBwcm9kdWN0cyB0byBjYXJ0IHwgeyJwcm9kdWN0cyI6WyJTYXVjZSBMYWJzIEJhY2twYWNrIiwiU2F1Y2UgTGFicyBCb2x0IFQtU2hpcnQiLCJTYXVjZSBMYWJzIEJpa2UgTGlnaHQiLCJTYXVjZSBMYWJzIE9uZXNpZSJdfQoyMDI2LTA3LTIxVDIwOjEyOjU4LjQ2MFogW1NURVBdIOKWtiBWZXJpZnlpbmcgYWRkLXRvLWNhcnQgYWN0aW9ucwoyMDI2LTA3LTIxVDIwOjEyOjU4LjUxNlogW0lORk9dICAg4pyTIFNhdWNlIExhYnMgQmFja3BhY2sgYWRkZWQgdG8gY2FydAoyMDI2LTA3LTIxVDIwOjEyOjU4LjU3NFogW0lORk9dICAg4pyTIFNhdWNlIExhYnMgQm9sdCBULVNoaXJ0IGFkZGVkIHRvIGNhcnQKMjAyNi0wNy0yMVQyMDoxMjo1OC42MjZaIFtJTkZPXSAgIOKckyBTYXVjZSBMYWJzIEJpa2UgTGlnaHQgYWRkZWQgdG8gY2FydAoyMDI2LTA3LTIxVDIwOjEyOjU4LjY4MlogW0lORk9dICAg4pyTIFNhdWNlIExhYnMgT25lc2llIGFkZGVkIHRvIGNhcnQKMjAyNi0wNy0yMVQyMDoxMjo1OC43MzBaIFtJTkZPXSBDYXJ0IGJhZGdlIHNob3dzIDQKMjAyNi0wNy0yMVQyMDoxMjo1OC43MzJaIFtTVEVQXSDilrYgTmF2aWdhdGluZyB0byBjYXJ0CjIwMjYtMDctMjFUMjA6MTI6NTguOTQwWiBbU1RFUF0g4pa2IFZlcmlmeWluZyBjYXJ0IGNvbnRlbnRzICg0IHByb2R1Y3RzKQoyMDI2LTA3LTIxVDIwOjEyOjU5LjAwOVogW0lORk9dICAg4pyTIFNhdWNlIExhYnMgQmFja3BhY2sgcHJlc2VudCBpbiBjYXJ0CjIwMjYtMDctMjFUMjA6MTI6NTkuMDA5WiBbSU5GT10gICDinJMgU2F1Y2UgTGFicyBCb2x0IFQtU2hpcnQgcHJlc2VudCBpbiBjYXJ0CjIwMjYtMDctMjFUMjA6MTI6NTkuMDA5WiBbSU5GT10gICDinJMgU2F1Y2UgTGFicyBCaWtlIExpZ2h0IHByZXNlbnQgaW4gY2FydAoyMDI2LTA3LTIxVDIwOjEyOjU5LjAwOVogW0lORk9dICAg4pyTIFNhdWNlIExhYnMgT25lc2llIHByZXNlbnQgaW4gY2FydAoyMDI2LTA3LTIxVDIwOjEyOjU5LjIxOVogW1NURVBdIOKWtiBSZW1vdmluZyBTYXVjZSBMYWJzIEJhY2twYWNrIGZyb20gY2FydAoyMDI2LTA3LTIxVDIwOjEyOjU5LjI5NVogW0lORk9dIEJhY2twYWNrIHJlbW92ZWQKMjAyNi0wNy0yMVQyMDoxMjo1OS4yOTZaIFtTVEVQXSDilrYgVmVyaWZ5aW5nIGNhcnQgYWZ0ZXIgcmVtb3ZhbAoyMDI2LTA3LTIxVDIwOjEyOjU5LjMyNVogW0lORk9dICAg4pyTIEJhY2twYWNrIE5PVCBwcmVzZW50CjIwMjYtMDctMjFUMjA6MTI6NTkuMzY3WiBbSU5GT10gICDinJMgU2F1Y2UgTGFicyBCb2x0IFQtU2hpcnQgc3RpbGwgcHJlc2VudAoyMDI2LTA3LTIxVDIwOjEyOjU5LjQwN1ogW0lORk9dICAg4pyTIFNhdWNlIExhYnMgQmlrZSBMaWdodCBzdGlsbCBwcmVzZW50CjIwMjYtMDctMjFUMjA6MTI6NTkuNDQ3WiBbSU5GT10gICDinJMgU2F1Y2UgTGFicyBPbmVzaWUgc3RpbGwgcHJlc2VudAoyMDI2LTA3LTIxVDIwOjEyOjU5LjY0NVogW1NURVBdIOKWtiBDbGlja2luZyBDaGVja291dCBidXR0b24KMjAyNi0wNy0yMVQyMDoxMjo1OS44MTZaIFtJTkZPXSBDaGVja291dCBpbmZvcm1hdGlvbiBwYWdlIGxvYWRlZAoyMDI2LTA3LTIxVDIwOjEyOjU5LjgxN1ogW1NURVBdIOKWtiBGaWxsaW5nIGNoZWNrb3V0IGluZm8gfCB7ImZpcnN0TmFtZSI6IkpvaG4iLCJsYXN0TmFtZSI6IkRvZSIsInppcENvZGUiOiIxMjM0NSJ9CjIwMjYtMDctMjFUMjA6MTM6MDAuMTEzWiBbSU5GT10gQ2hlY2tvdXQgaW5mbyBzdWJtaXR0ZWQKMjAyNi0wNy0yMVQyMDoxMzowMC4xMTVaIFtTVEVQXSDilrYgVmVyaWZ5aW5nIGNoZWNrb3V0IG92ZXJ2aWV3CjIwMjYtMDctMjFUMjA6MTM6MDAuMTgwWiBbSU5GT10gQ2hlY2tvdXQgb3ZlcnZpZXcgcGFnZSBsb2FkZWQKMjAyNi0wNy0yMVQyMDoxMzowMC4xODFaIFtTVEVQXSDilrYgVmVyaWZ5aW5nIG9yZGVyIGxpbmUgaXRlbXMKMjAyNi0wNy0yMVQyMDoxMzowMC4yMjRaIFtJTkZPXSAgIOKckyBDb3JyZWN0IHByb2R1Y3RzIGxpc3RlZAoyMDI2LTA3LTIxVDIwOjEzOjAwLjI4MFogW0lORk9dICAg4pyTIENvcnJlY3QgcHJpY2VzIGxpc3RlZAoyMDI2LTA3LTIxVDIwOjEzOjAwLjI4MVogW1NURVBdIOKWtiBWZXJpZnlpbmcgb3JkZXIgdG90YWxzCjIwMjYtMDctMjFUMjA6MTM6MDAuMzQxWiBbSU5GT10gT3JkZXIgc3VtbWFyeSByZXRyaWV2ZWQgfCB7Iml0ZW1Ub3RhbCI6Ikl0ZW0gdG90YWw6ICQzMy45NyIsInRheCI6IlRheDogJDIuNzIiLCJ0b3RhbCI6IlRvdGFsOiAkMzYuNjkifQoyMDI2LTA3LTIxVDIwOjEzOjAwLjM5OVogW0lORk9dICAg4pyTIEl0ZW0gdG90YWwgY29ycmVjdAoyMDI2LTA3LTIxVDIwOjEzOjAwLjM5OVogW0lORk9dICAg4pyTIFRheCBjb3JyZWN0CjIwMjYtMDctMjFUMjA6MTM6MDAuMzk5WiBbSU5GT10gICDinJMgR3JhbmQgdG90YWwgY29ycmVjdAoyMDI2LTA3LTIxVDIwOjEzOjAwLjU1OFogW1NURVBdIOKWtiBDbGlja2luZyBGaW5pc2ggYnV0dG9uCjIwMjYtMDctMjFUMjA6MTM6MDAuNjcyWiBbSU5GT10gT3JkZXIgc3VibWl0dGVkCjIwMjYtMDctMjFUMjA6MTM6MDAuNjc0WiBbU1RFUF0g4pa2IFZlcmlmeWluZyBjb25maXJtYXRpb24gcGFnZQoyMDI2LTA3LTIxVDIwOjEzOjAwLjgyNFogW0lORk9dICAg4pyTIE9yZGVyIGNvbmZpcm1lZAoyMDI2LTA3LTIxVDIwOjEzOjAwLjk3MVogW1NURVBdIOKWtiBMb2dnaW5nIG91dAoyMDI2LTA3LTIxVDIwOjEzOjAyLjEzN1ogW0lORk9dIExvZ291dCB0cmlnZ2VyZWQKMjAyNi0wNy0yMVQyMDoxMzowMi4xODJaIFtJTkZPXSAgIOKckyBMb2dpbiBwYWdlIHZpc2libGUg4oCUIGxvZ291dCBzdWNjZXNzZnVs"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3bbd2960824dc85c4f67-c5dab638f754d1ac49b9",
+              "file": "purchase-flow.spec.ts",
+              "line": 29,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-21T20:12:53.620Z",
+    "duration": 9206.264,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

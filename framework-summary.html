@@ -1,0 +1,271 @@
+
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SauceDemo Playwright Framework — Delivery Report</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #1f2328;
+    background: #ffffff;
+    padding: 32px 16px;
+  }
+  .container { max-width: 760px; margin: 0 auto; }
+  h1 { font-size: 22px; font-weight: 700; color: #1f2328; margin-bottom: 4px; }
+  h2 { font-size: 16px; font-weight: 600; color: #1f2328; margin: 32px 0 12px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; }
+  h3 { font-size: 13px; font-weight: 600; color: #57606a; text-transform: uppercase; letter-spacing: 0.05em; margin: 20px 0 8px; }
+  p  { margin-bottom: 10px; color: #1f2328; }
+  .meta { font-size: 12px; color: #57606a; margin-bottom: 24px; }
+  /* Result banner */
+  .result-banner {
+    background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 6px;
+    padding: 16px 20px; display: flex; align-items: center; gap: 16px; margin-bottom: 28px;
+  }
+  .result-icon { font-size: 28px; }
+  .result-title { font-size: 17px; font-weight: 700; color: #15803d; }
+  .result-sub { font-size: 13px; color: #57606a; margin-top: 2px; }
+  .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 28px; }
+  .stat { background: #f7f8fa; border: 1px solid #e5e7eb; border-radius: 6px; padding: 12px 14px; text-align: center; }
+  .stat-val { font-size: 22px; font-weight: 700; color: #3b82d4; }
+  .stat-lbl { font-size: 11px; color: #57606a; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 2px; }
+  /* File tree */
+  .tree { font-family: "Cascadia Mono", "Consolas", "Courier New", monospace; font-size: 12px; background: #f7f8fa; border: 1px solid #e5e7eb; border-radius: 6px; padding: 16px; line-height: 1.75; overflow-x: auto; }
+  .tree .dir  { color: #3b82d4; font-weight: 600; }
+  .tree .file { color: #1f2328; }
+  .tree .note { color: #57606a; }
+  /* Table */
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #f7f8fa; text-align: left; padding: 7px 10px; border: 1px solid #e5e7eb; font-weight: 600; font-size: 11px; text-transform: uppercase; color: #57606a; letter-spacing: 0.04em; }
+  td { padding: 7px 10px; border: 1px solid #e5e7eb; vertical-align: top; }
+  tr:nth-child(even) td { background: #fafafa; }
+  /* Steps */
+  .step-list { list-style: none; }
+  .step-list li { display: flex; gap: 10px; padding: 6px 0; border-bottom: 1px solid #f0f0f0; font-size: 13px; }
+  .step-list li:last-child { border-bottom: none; }
+  .step-num { background: #3b82d4; color: #fff; border-radius: 50%; width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+  .step-pass { background: #16a34a; }
+  /* Code blocks */
+  .code { font-family: "Cascadia Mono", "Consolas", "Courier New", monospace; font-size: 12px; background: #f7f8fa; border: 1px solid #e5e7eb; border-radius: 4px; padding: 12px 14px; line-height: 1.7; white-space: pre; overflow-x: auto; }
+  /* Badges */
+  .badge { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 12px; }
+  .badge-green  { background: #dcfce7; color: #15803d; }
+  .badge-blue   { background: #dbeafe; color: #1d4ed8; }
+  .badge-purple { background: #ede9fe; color: #6d28d9; }
+  .badge-yellow { background: #fef9c3; color: #854d0e; }
+  /* Layer grid */
+  .layer-grid { display: grid; grid-template-columns: 140px 1fr; gap: 0; border: 1px solid #e5e7eb; border-radius: 6px; overflow: hidden; font-size: 13px; }
+  .layer-label { background: #f7f8fa; padding: 8px 12px; border-bottom: 1px solid #e5e7eb; font-weight: 600; color: #57606a; }
+  .layer-desc  { padding: 8px 12px; border-bottom: 1px solid #e5e7eb; }
+  .layer-label:last-of-type, .layer-desc:last-of-type { border-bottom: none; }
+  footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #e5e7eb; text-align: center; font-size: 12px; color: #57606a; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <h1>SauceDemo Playwright TypeScript Framework</h1>
+  <p class="meta">Enterprise-grade test automation framework · Delivered 2026-07-21 · Target: https://www.saucedemo.com</p>
+
+  
+  <div class="result-banner">
+    <div class="result-icon">✅</div>
+    <div>
+      <div class="result-title">All tests passed</div>
+      <div class="result-sub">1 test · 0 failures · 0 flaky · Chromium · 9.2s execution time</div>
+    </div>
+  </div>
+
+  
+  <div class="stat-grid">
+    <div class="stat"><div class="stat-val">1</div><div class="stat-lbl">Tests Passed</div></div>
+    <div class="stat"><div class="stat-val">16</div><div class="stat-lbl">Test Steps</div></div>
+    <div class="stat"><div class="stat-val">6</div><div class="stat-lbl">Screenshots</div></div>
+    <div class="stat"><div class="stat-val">9.2s</div><div class="stat-lbl">Duration</div></div>
+  </div>
+
+  
+  <h2>Architecture Overview</h2>
+  <div class="layer-grid">
+    <div class="layer-label">Fixtures</div>
+    <div class="layer-desc">Dependency injection for all page objects, config, logger, and screenshots. Every test gets a clean, typed context.</div>
+    <div class="layer-label">Page Objects</div>
+    <div class="layer-desc">6 page classes extend BasePage. Each owns its own locators (data-test selectors) and assertion methods. Zero duplication.</div>
+    <div class="layer-label">Components</div>
+    <div class="layer-desc">HeaderComponent is shared across all authenticated pages (cart badge, menu, logout). Reused by all POMs and tests.</div>
+    <div class="layer-label">Constants</div>
+    <div class="layer-desc">Single source of truth for every data-test selector, URL path, page title, and expected text string.</div>
+    <div class="layer-label">Data Layer</div>
+    <div class="layer-desc">Product catalogue and expected order totals live in src/data. Tests never hardcode prices or product names.</div>
+    <div class="layer-label">Config</div>
+    <div class="layer-desc">Typed EnvironmentConfig resolved from .env.staging. No process.env reads inside tests or page objects.</div>
+    <div class="layer-label">Utils</div>
+    <div class="layer-desc">Logger (structured, levelled, auto-attached to report) and ScreenshotUtil (auto-named, auto-attached) injected via fixtures.</div>
+  </div>
+
+  
+  <h2>Project Structure</h2>
+  <div class="tree">
+<span class="dir">saucedemo/</span>
+├── <span class="file">playwright.config.ts</span>      <span class="note"># Reporters, browsers, env, retries, parallel</span>
+├── <span class="file">package.json</span>
+├── <span class="file">tsconfig.json</span>
+├── <span class="file">.env.staging</span>              <span class="note"># All runtime config — never hardcode in tests</span>
+├── <span class="file">.env.example</span>              <span class="note"># Template for new environments</span>
+│
+├── <span class="dir">src/</span>
+│   ├── <span class="dir">config/</span>
+│   │   └── <span class="file">environment.ts</span>    <span class="note"># Typed config resolver</span>
+│   ├── <span class="dir">constants/</span>
+│   │   └── <span class="file">index.ts</span>          <span class="note"># All selectors, URLs, expected text, timeouts</span>
+│   ├── <span class="dir">data/</span>
+│   │   └── <span class="file">products.ts</span>       <span class="note"># Product catalogue + expected order totals</span>
+│   ├── <span class="dir">types/</span>
+│   │   └── <span class="file">index.ts</span>          <span class="note"># TypeScript interfaces (Product, OrderSummary…)</span>
+│   ├── <span class="dir">pages/</span>               <span class="note"># Page Object Model</span>
+│   │   ├── <span class="file">BasePage.ts</span>       <span class="note"># Abstract base: navigation, header, helpers</span>
+│   │   ├── <span class="file">LoginPage.ts</span>
+│   │   ├── <span class="file">InventoryPage.ts</span>
+│   │   ├── <span class="file">CartPage.ts</span>
+│   │   ├── <span class="file">CheckoutInfoPage.ts</span>
+│   │   ├── <span class="file">CheckoutOverviewPage.ts</span>
+│   │   └── <span class="file">CheckoutCompletePage.ts</span>
+│   ├── <span class="dir">components/</span>
+│   │   └── <span class="file">HeaderComponent.ts</span>  <span class="note"># Menu, cart badge, logout — reused by all pages</span>
+│   ├── <span class="dir">fixtures/</span>
+│   │   └── <span class="file">index.ts</span>          <span class="note"># Custom test + expect re-export</span>
+│   └── <span class="dir">utils/</span>
+│       ├── <span class="file">logger.ts</span>         <span class="note"># Structured logger with report attachment</span>
+│       └── <span class="file">screenshotUtil.ts</span> <span class="note"># Auto-named, auto-attached screenshots</span>
+│
+├── <span class="dir">tests/e2e/</span>
+│   └── <span class="file">purchase-flow.spec.ts</span>  <span class="note"># 16-step full E2E scenario</span>
+│
+└── <span class="dir">reports/</span>
+    ├── <span class="dir">html/</span>              <span class="note"># Playwright interactive HTML report</span>
+    ├── <span class="dir">json/results.json</span>  <span class="note"># Machine-readable results</span>
+    ├── <span class="dir">junit/results.xml</span>  <span class="note"># CI integration (Jenkins / GitHub Actions)</span>
+    └── <span class="dir">screenshots/</span>       <span class="note"># 6 full-page PNGs captured during run</span>
+  </div>
+
+  
+  <h2>Test Execution Steps — All Passed</h2>
+  <ul class="step-list">
+    <li><span class="step-num step-pass">1</span>Launch application and login as standard_user</li>
+    <li><span class="step-num step-pass">2</span>Verify successful login — URL transitions to /inventory.html</li>
+    <li><span class="step-num step-pass">3</span>Capture full-page screenshot of all 6 products</li>
+    <li><span class="step-num step-pass">4</span>Add 4 products: Backpack, Bolt T-Shirt, Bike Light, Onesie</li>
+    <li><span class="step-num step-pass">5</span>Verify each product shows Remove button; cart badge = 4</li>
+    <li><span class="step-num step-pass">6</span>Navigate to cart; verify all 4 products present; capture screenshot</li>
+    <li><span class="step-num step-pass">7</span>Remove Sauce Labs Backpack from cart</li>
+    <li><span class="step-num step-pass">8</span>Verify Backpack absent; 3 remaining products present; badge = 3; capture screenshot</li>
+    <li><span class="step-num step-pass">9</span>Click Checkout; verify Checkout Info page loads</li>
+    <li><span class="step-num step-pass">10</span>Fill First Name / Last Name / ZIP from environment config</li>
+    <li><span class="step-num step-pass">11</span>Continue to Overview page; verify page loaded</li>
+    <li><span class="step-num step-pass">12</span>Assert 3 products, prices, subtotal $33.97, tax $2.72, total $36.69</li>
+    <li><span class="step-num step-pass">13</span>Capture checkout overview screenshot</li>
+    <li><span class="step-num step-pass">14</span>Finish order; verify confirmation "Thank you for your order!"</li>
+    <li><span class="step-num step-pass">15</span>Capture order confirmation screenshot</li>
+    <li><span class="step-num step-pass">16</span>Logout; verify login page visible; capture post-logout screenshot</li>
+  </ul>
+
+  
+  <h2>Screenshots Captured</h2>
+  <table>
+    <tr><th>Filename</th><th>Step</th><th>Type</th></tr>
+    <tr><td>inventory-all-products-*.png</td><td>Step 3 — all products</td><td><span class="badge badge-blue">Full Page</span></td></tr>
+    <tr><td>cart-all-4-products-*.png</td><td>Step 6 — cart before removal</td><td><span class="badge badge-blue">Full Page</span></td></tr>
+    <tr><td>cart-after-backpack-removal-*.png</td><td>Step 8 — cart after removal</td><td><span class="badge badge-blue">Full Page</span></td></tr>
+    <tr><td>checkout-overview-*.png</td><td>Step 12/13 — order summary</td><td><span class="badge badge-blue">Full Page</span></td></tr>
+    <tr><td>order-confirmation-*.png</td><td>Step 14/15 — confirmation</td><td><span class="badge badge-blue">Full Page</span></td></tr>
+    <tr><td>post-logout-login-page-*.png</td><td>Step 16 — post logout</td><td><span class="badge badge-blue">Full Page</span></td></tr>
+    <tr><td>FAILURE-*.png</td><td>Automatic on any failure</td><td><span class="badge badge-yellow">On Failure</span></td></tr>
+  </table>
+
+  
+  <h2>Reports Generated</h2>
+  <table>
+    <tr><th>Format</th><th>Path</th><th>Purpose</th></tr>
+    <tr><td><span class="badge badge-blue">HTML</span></td><td>reports/html/index.html</td><td>Interactive report with steps, screenshots, logs, video, trace</td></tr>
+    <tr><td><span class="badge badge-green">JSON</span></td><td>reports/json/results.json</td><td>Programmatic consumption, dashboards</td></tr>
+    <tr><td><span class="badge badge-purple">JUnit XML</span></td><td>reports/junit/results.xml</td><td>CI systems: Jenkins, GitHub Actions, Azure DevOps</td></tr>
+    <tr><td><span class="badge badge-yellow">Trace</span></td><td>test-results/**/trace.zip</td><td>Playwright Trace Viewer — step-by-step debug on failure</td></tr>
+    <tr><td><span class="badge badge-yellow">Video</span></td><td>test-results/**/video.webm</td><td>Retained on failure for visual debugging</td></tr>
+  </table>
+
+  
+  <h2>Commands</h2>
+
+  <h3>Installation</h3>
+  <div class="code">npm install
+npx playwright install --with-deps</div>
+
+  <h3>Run Tests</h3>
+  <div class="code"># All browsers, headless (default)
+npm test
+
+# Single browser
+npm run test:chrome         # Chromium
+npm run test:firefox        # Firefox
+npm run test:webkit         # WebKit/Safari
+
+# Headed (visible browser)
+npm run test:headed
+
+# Interactive UI mode
+npm run test:ui
+
+# Debug mode (step-through)
+npm run test:debug</div>
+
+  <h3>View Reports</h3>
+  <div class="code"># Open interactive HTML report
+npm run report
+
+# Open Playwright Trace Viewer (on failure)
+npx playwright show-trace test-results/**/*.zip</div>
+
+  <h3>Switch User Persona</h3>
+  <div class="code"># Edit .env.staging — no test code changes needed
+TEST_USERNAME=performance_glitch_user   # one of: standard_user, locked_out_user,
+TEST_USERNAME=problem_user              # problem_user, performance_glitch_user,
+TEST_USERNAME=error_user               # error_user, visual_user</div>
+
+  
+  <h2>Configuration Reference (.env.staging)</h2>
+  <table>
+    <tr><th>Variable</th><th>Default</th><th>Description</th></tr>
+    <tr><td>TEST_ENV</td><td>staging</td><td>Environment name (loads .env.&lt;name&gt;)</td></tr>
+    <tr><td>BASE_URL</td><td>https://www.saucedemo.com</td><td>Application URL</td></tr>
+    <tr><td>TEST_USERNAME</td><td>standard_user</td><td>Login persona (avoids Windows USERNAME clash)</td></tr>
+    <tr><td>TEST_PASSWORD</td><td>secret_sauce</td><td>Login password</td></tr>
+    <tr><td>CHECKOUT_FIRST_NAME</td><td>John</td><td>Checkout form first name</td></tr>
+    <tr><td>CHECKOUT_LAST_NAME</td><td>Doe</td><td>Checkout form last name</td></tr>
+    <tr><td>CHECKOUT_ZIP_CODE</td><td>12345</td><td>Checkout form ZIP code</td></tr>
+    <tr><td>HEADLESS</td><td>true</td><td>Run browser headless</td></tr>
+    <tr><td>TIMEOUT</td><td>30000</td><td>Action/navigation timeout (ms)</td></tr>
+    <tr><td>RETRIES</td><td>1</td><td>Retry count on failure</td></tr>
+    <tr><td>WORKERS</td><td>2</td><td>Parallel worker count</td></tr>
+  </table>
+
+  
+  <h2>Playwright Best Practices Applied</h2>
+  <table>
+    <tr><th>Practice</th><th>Implementation</th></tr>
+    <tr><td>Resilient locators</td><td>All selectors use <code>data-test</code> attributes — stable across style changes</td></tr>
+    <tr><td>No arbitrary waits</td><td>Zero <code>waitForTimeout</code> calls — auto-waiting and explicit waitForURL/waitForSelector</td></tr>
+    <tr><td>Fixtures</td><td>Full DI via custom test fixture — no manual page object instantiation in tests</td></tr>
+    <tr><td>Parallel execution</td><td><code>fullyParallel: true</code> in config; workers configurable</td></tr>
+    <tr><td>Multi-browser</td><td>4 browser projects: Chromium, Firefox, WebKit, Mobile Chrome</td></tr>
+    <tr><td>No hardcoded data</td><td>All credentials, checkout data, URLs, selectors externalised</td></tr>
+    <tr><td>Reusable assertions</td><td>Assertion methods on each Page Object — not duplicated in tests</td></tr>
+    <tr><td>CI-ready</td><td>JUnit XML, trace, video on failure; <code>forbidOnly</code> in CI mode</td></tr>
+  </table>
+
+  <footer>Made with IBM Bob</footer>
+</div>
+</body>
+</html>
