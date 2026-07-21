@@ -1,0 +1,68 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="9.206264">
+<testsuite name="purchase-flow.spec.ts" timestamp="2026-07-21T20:12:53.764Z" hostname="chromium" tests="1" failures="0" skipped="0" time="7.288" errors="0">
+<testcase name="SauceDemo — Full E2E Purchase Flow › Complete purchase flow: add to cart, remove item, checkout, confirm, logout" classname="purchase-flow.spec.ts" time="7.288">
+<system-out>
+<![CDATA[[32m2026-07-21T20:12:55.569Z [STEP ] ▶ Logging in | {"username":"standard_user"}[0m
+[36m2026-07-21T20:12:57.431Z [INFO ] Login succeeded, proceeding to inventory page[0m
+[32m2026-07-21T20:12:57.456Z [STEP ] ▶ Verifying inventory page loaded[0m
+[36m2026-07-21T20:12:57.580Z [INFO ] Inventory page loaded successfully[0m
+[32m2026-07-21T20:12:57.584Z [STEP ] ▶ Capturing full-page screenshot of products listing[0m
+[36m2026-07-21T20:12:58.036Z [INFO ] Screenshot captured[0m
+[32m2026-07-21T20:12:58.039Z [STEP ] ▶ Adding products to cart | {"products":["Sauce Labs Backpack","Sauce Labs Bolt T-Shirt","Sauce Labs Bike Light","Sauce Labs Onesie"]}[0m
+[32m2026-07-21T20:12:58.460Z [STEP ] ▶ Verifying add-to-cart actions[0m
+[36m2026-07-21T20:12:58.516Z [INFO ]   ✓ Sauce Labs Backpack added to cart[0m
+[36m2026-07-21T20:12:58.574Z [INFO ]   ✓ Sauce Labs Bolt T-Shirt added to cart[0m
+[36m2026-07-21T20:12:58.626Z [INFO ]   ✓ Sauce Labs Bike Light added to cart[0m
+[36m2026-07-21T20:12:58.682Z [INFO ]   ✓ Sauce Labs Onesie added to cart[0m
+[36m2026-07-21T20:12:58.730Z [INFO ] Cart badge shows 4[0m
+[32m2026-07-21T20:12:58.732Z [STEP ] ▶ Navigating to cart[0m
+[32m2026-07-21T20:12:58.940Z [STEP ] ▶ Verifying cart contents (4 products)[0m
+[36m2026-07-21T20:12:59.009Z [INFO ]   ✓ Sauce Labs Backpack present in cart[0m
+[36m2026-07-21T20:12:59.009Z [INFO ]   ✓ Sauce Labs Bolt T-Shirt present in cart[0m
+[36m2026-07-21T20:12:59.009Z [INFO ]   ✓ Sauce Labs Bike Light present in cart[0m
+[36m2026-07-21T20:12:59.009Z [INFO ]   ✓ Sauce Labs Onesie present in cart[0m
+[32m2026-07-21T20:12:59.219Z [STEP ] ▶ Removing Sauce Labs Backpack from cart[0m
+[36m2026-07-21T20:12:59.295Z [INFO ] Backpack removed[0m
+[32m2026-07-21T20:12:59.296Z [STEP ] ▶ Verifying cart after removal[0m
+[36m2026-07-21T20:12:59.325Z [INFO ]   ✓ Backpack NOT present[0m
+[36m2026-07-21T20:12:59.367Z [INFO ]   ✓ Sauce Labs Bolt T-Shirt still present[0m
+[36m2026-07-21T20:12:59.407Z [INFO ]   ✓ Sauce Labs Bike Light still present[0m
+[36m2026-07-21T20:12:59.447Z [INFO ]   ✓ Sauce Labs Onesie still present[0m
+[32m2026-07-21T20:12:59.645Z [STEP ] ▶ Clicking Checkout button[0m
+[36m2026-07-21T20:12:59.816Z [INFO ] Checkout information page loaded[0m
+[32m2026-07-21T20:12:59.817Z [STEP ] ▶ Filling checkout info | {"firstName":"John","lastName":"Doe","zipCode":"12345"}[0m
+[36m2026-07-21T20:13:00.113Z [INFO ] Checkout info submitted[0m
+[32m2026-07-21T20:13:00.115Z [STEP ] ▶ Verifying checkout overview[0m
+[36m2026-07-21T20:13:00.180Z [INFO ] Checkout overview page loaded[0m
+[32m2026-07-21T20:13:00.181Z [STEP ] ▶ Verifying order line items[0m
+[36m2026-07-21T20:13:00.224Z [INFO ]   ✓ Correct products listed[0m
+[36m2026-07-21T20:13:00.280Z [INFO ]   ✓ Correct prices listed[0m
+[32m2026-07-21T20:13:00.281Z [STEP ] ▶ Verifying order totals[0m
+[36m2026-07-21T20:13:00.341Z [INFO ] Order summary retrieved | {"itemTotal":"Item total: $33.97","tax":"Tax: $2.72","total":"Total: $36.69"}[0m
+[36m2026-07-21T20:13:00.399Z [INFO ]   ✓ Item total correct[0m
+[36m2026-07-21T20:13:00.399Z [INFO ]   ✓ Tax correct[0m
+[36m2026-07-21T20:13:00.399Z [INFO ]   ✓ Grand total correct[0m
+[32m2026-07-21T20:13:00.558Z [STEP ] ▶ Clicking Finish button[0m
+[36m2026-07-21T20:13:00.672Z [INFO ] Order submitted[0m
+[32m2026-07-21T20:13:00.674Z [STEP ] ▶ Verifying confirmation page[0m
+[36m2026-07-21T20:13:00.824Z [INFO ]   ✓ Order confirmed[0m
+[32m2026-07-21T20:13:00.971Z [STEP ] ▶ Logging out[0m
+[36m2026-07-21T20:13:02.137Z [INFO ] Logout triggered[0m
+[36m2026-07-21T20:13:02.182Z [INFO ]   ✓ Login page visible — logout successful[0m
+
+[[ATTACHMENT|..\..\test-results\purchase-flow-SauceDemo-—--0eb8d-tem-checkout-confirm-logout-chromium\attachments\inventory-all-products-30c90e3bc0b04d15e5ec849d75f26b00e12df774.png]]
+
+[[ATTACHMENT|..\..\test-results\purchase-flow-SauceDemo-—--0eb8d-tem-checkout-confirm-logout-chromium\attachments\cart-all-4-products-d0aa781336d7eed0db28375f54ea23fea6e69402.png]]
+
+[[ATTACHMENT|..\..\test-results\purchase-flow-SauceDemo-—--0eb8d-tem-checkout-confirm-logout-chromium\attachments\cart-after-backpack-removal-7cfb8292a5a6d5a85f25e99f5915a9a202e6ce91.png]]
+
+[[ATTACHMENT|..\..\test-results\purchase-flow-SauceDemo-—--0eb8d-tem-checkout-confirm-logout-chromium\attachments\checkout-overview-d14de27f395bd6d4ce05e30b944e0757408bea96.png]]
+
+[[ATTACHMENT|..\..\test-results\purchase-flow-SauceDemo-—--0eb8d-tem-checkout-confirm-logout-chromium\attachments\order-confirmation-b20b2dbabb4f6220fc17060fb2cbf6e288a9a759.png]]
+
+[[ATTACHMENT|..\..\test-results\purchase-flow-SauceDemo-—--0eb8d-tem-checkout-confirm-logout-chromium\attachments\post-logout-login-page-349fadec5825643d34dbd920bdfefe218619d3ed.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
