@@ -2,4 +2,5 @@ node_modules/
 .playwright-mcp/
 reports/
 test-results/
-package-lock.jsonc:\Users\SouvikGhosh\AppData\Local\Temp\bob-artifacts\framework-summary.html
+package-lock.json
+.env
