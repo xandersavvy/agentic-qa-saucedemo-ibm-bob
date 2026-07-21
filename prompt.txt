@@ -1,0 +1,185 @@
+Prompt I have given to bob to refine 
+
+write and verify a reusable, maintainable, rich playwright typescript automation framework where
+we open https://www.saucedemo.com/
+login with username standard_user
+password secret_sauce
+Take screenshot of the full pages with all the products 
+add backpack T-shirt Bike Light Onesie 
+remove backpack 
+checkout 
+add first name last name zip
+finish and generate pdf report 
+and logout
+use playwright mcp to verify every steps needed , 
+you need to act as a seasoned automation architect and 
+make sure the data is configurable as we might need to logout as various personas later on 
+
+
+Bob's refined prompt -->
+
+Act as a Principal Test Automation Architect with extensive experience designing enterprise grade Playwright + TypeScript automation frameworks.
+
+Your objective is to design, implement, execute, and verify a production ready automation framework, not just a script.
+
+## Application
+
+https://www.saucedemo.com/
+
+## Test Scenario
+
+Implement the following end to end flow:
+
+1. Launch the application.
+2. Login using:
+
+   * Username: `standard_user`
+   * Password: `secret_sauce`
+3. Verify successful login.
+4. Capture a full page screenshot showing all available products.
+5. Add the following products to the cart:
+
+   * Sauce Labs Backpack
+   * Sauce Labs Bolt T-Shirt
+   * Sauce Labs Bike Light
+   * Sauce Labs Onesie
+6. Verify each product was successfully added.
+7. Remove the Sauce Labs Backpack from the cart.
+8. Verify it has been removed while the remaining products are still present.
+9. Proceed to Checkout.
+10. Fill checkout information using configurable test data:
+
+    * First Name
+    * Last Name
+    * ZIP Code
+11. Continue to the overview page.
+12. Verify:
+
+    * Remaining products
+    * Prices
+    * Tax
+    * Total amount
+13. Finish the purchase.
+14. Verify the order confirmation page.
+15. Logout successfully.
+16. Generate an execution report including screenshots and execution status.
+
+---
+
+# Framework Requirements
+
+Do **not** build everything inside one test file.
+
+Create a reusable, scalable, enterprise grade Playwright TypeScript framework that follows software engineering best practices.
+
+The framework should include:
+
+* Page Object Model (POM)
+* Component Objects where appropriate
+* Base Page abstraction
+* Fixtures
+* Utility classes
+* Configuration management
+* Test data management
+* Environment support
+* Reusable helper methods
+* Constants
+* Logging utilities
+* Screenshot utilities
+* Reporting utilities
+
+Organize the project into clean folders with clear separation of responsibilities.
+
+---
+
+# Configuration Requirements
+
+The framework must support configuration driven execution.
+
+Store configurable values externally, including:
+
+* Base URL
+* User credentials
+* Checkout information
+* Browser selection
+* Headless mode
+* Timeouts
+* Environment settings
+
+Do **not** hardcode test data inside tests.
+
+The framework should make it easy to execute the same test with multiple user personas in the future (for example: `standard_user`, `locked_out_user`, `problem_user`, `performance_glitch_user`, etc.) simply by changing configuration.
+
+---
+
+# Playwright Best Practices
+
+Follow modern Playwright recommendations:
+
+* Use Playwright Test Runner
+* Avoid arbitrary waits (`waitForTimeout`)
+* Prefer auto waiting
+* Use resilient locators
+* Prefer `getByRole`, `getByLabel`, `getByTestId`, or other accessibility-first locators where applicable
+* Implement reusable assertions
+* Use proper fixtures
+* Keep tests readable and maintainable
+* Ensure the framework supports parallel execution
+* Avoid duplicated code
+
+---
+
+# Verification Requirements
+
+Use Playwright MCP throughout development.
+
+At every major step:
+
+* Inspect the page using Playwright MCP.
+* Verify the chosen locators are stable.
+* Confirm every interaction behaves as expected.
+* Verify page transitions.
+* Verify products.
+* Verify cart contents.
+* Verify checkout.
+* Verify logout.
+* Validate that no important UI interaction has been skipped.
+
+Do not assume any locator. Inspect and verify before implementing it.
+
+---
+
+# Reporting
+
+Generate rich execution reports that include:
+
+* Pass/Fail status
+* Execution duration
+* Step level details
+* Full page screenshots where appropriate
+* Failure screenshots
+* Attachments
+* Logs
+
+Generate a professional PDF execution report after the test completes.
+
+---
+
+# Deliverables
+
+Provide:
+
+1. Complete project structure.
+2. Well documented TypeScript source code.
+3. Playwright configuration.
+4. Fixtures.
+5. Page Objects.
+6. Utilities.
+7. Configuration files.
+8. Test data files.
+9. Reporting configuration.
+10. Instructions to install dependencies.
+11. Commands to execute the tests.
+12. Commands to generate the reports.
+
+The final solution should resemble a framework suitable for use in a real enterprise automation project, emphasizing maintainability, extensibility, readability, configurability, and long term scalability rather than simply completing the test scenario.
